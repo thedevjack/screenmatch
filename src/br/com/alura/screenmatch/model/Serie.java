@@ -38,4 +38,15 @@ public class Serie extends Titulo {
     public void setMinutorPorEpisodio(int minutorPorEpisodio) {
         this.minutorPorEpisodio = minutorPorEpisodio;
     }
+
+    // A anotacao @Override possibilita a sobrescrita de um metodo
+    @Override
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutorPorEpisodio;
+    }
+
+    @Override
+    public double getSomaDasAvaliacoes() {
+        return super.getSomaDasAvaliacoes();
+    }
 }

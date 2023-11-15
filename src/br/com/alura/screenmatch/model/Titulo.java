@@ -12,7 +12,8 @@ public class Titulo {
         System.out.println("FICHA TECNICA");
         System.out.println("Nome: " + nome);
         System.out.println("Incluido no plano?: " + incluidoNoPlano);
-        System.out.println("Total: " + totalDeAvaliacoes);
+        System.out.println("Total de avaliacoes: " + totalDeAvaliacoes);
+        System.out.println("Media das avaliacoes: " + somaDasAvaliacoes);
     }
 
     public void avalia(double nota) {
@@ -67,7 +68,6 @@ public class Titulo {
     public void setSomaDasAvaliacoes(double somaDasAvaliacoes) {
         this.somaDasAvaliacoes = somaDasAvaliacoes;
     }
-
 
     public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
         this.totalDeAvaliacoes = totalDeAvaliacoes;
