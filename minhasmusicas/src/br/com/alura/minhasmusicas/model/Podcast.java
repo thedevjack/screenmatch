@@ -1,17 +1,17 @@
 package br.com.alura.minhasmusicas.model;
 
 // SUB CLASSE que HERDA de -> Audio
-public class Podcast extends Audio{
+public class Podcast extends Audio {
 
-    private String host;
+    private String apresentador;
     private String descricao;
 
-    public String getHost() {
-        return host;
+    public String getApresentador() {
+        return apresentador;
     }
 
-    public void setHost(String host) {
-        this.host = host;
+    public void setApresentador(String apresentador) {
+        this.apresentador = apresentador;
     }
 
     public String getDescricao() {
@@ -20,5 +20,16 @@ public class Podcast extends Audio{
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @Override
+    public int getClassificacao() {
+
+        if (this.getTotalCurtidas() > 500) {
+            return 10;
+        } else {
+            return 8;
+        }
+
     }
 }

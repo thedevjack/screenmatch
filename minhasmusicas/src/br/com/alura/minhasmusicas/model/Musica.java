@@ -1,7 +1,7 @@
 package br.com.alura.minhasmusicas.model;
 
 // SUB CLASSE que HERDA de -> Audio
-public class Musica extends Audio{
+public class Musica extends Audio {
 
     private String album;
     private String artista;
@@ -29,5 +29,14 @@ public class Musica extends Audio{
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes() > 2000) {
+            return 10;
+        } else {
+            return 7;
+        }
     }
 }
