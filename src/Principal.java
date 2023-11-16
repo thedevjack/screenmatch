@@ -4,6 +4,9 @@ import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -73,6 +76,24 @@ public class Principal {
         episodio.setSerie(serie);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filme3 = new Filme();
+        filme3.setDuracaoEmMinutos(200);
+        filme3.setNome("Dogville");
+        filme3.setAnoDeLancamento(2003);
+        filme3.avalia(10);
+
+        // Criando lista de filmes
+        ArrayList<Filme> listaFilmes = new ArrayList<>();
+        // adicionando filmes ao Array listaFilmes
+        listaFilmes.add(filme1);
+        listaFilmes.add(filme2);
+        listaFilmes.add(filme3);
+
+        // imprimindo o tamanho da lista .size()
+        System.out.println("Tamanho da lista: " + listaFilmes.size());
+        // .get() pega o primeiro valor da lista, no caso a posicao ZERO
+        System.out.println("Primeiro filme: " + listaFilmes.get(0).getNome());
 
     }
 }
