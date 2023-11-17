@@ -93,7 +93,8 @@ public class Principal {
         // imprimindo o tamanho da lista .size()
         System.out.println("Tamanho da lista: " + listaFilmes.size());
         // .get() pega o primeiro valor da lista, no caso a posicao ZERO
-        System.out.println("Primeiro filme: " + listaFilmes.get(0).getNome());
+        System.out.println("Primeiro filme: " + listaFilmes.get(0));
+        System.out.println(listaFilmes);
 
     }
 }
