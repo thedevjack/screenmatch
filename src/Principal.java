@@ -3,17 +3,13 @@ import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
 
         System.out.println("=======================PRIMEIRO FILME=======================");
-        Filme filme1 = new Filme("Star Wars");
-
-        filme1.setAnoDeLancamento(1985);
+        Filme filme1 = new Filme("Star Wars", 1985);
         filme1.setDuracaoEmMinutos(180);
         filme1.avalia(10);
 
@@ -24,9 +20,7 @@ public class Principal {
         filme1.exibeFichaTecnica();
 
         System.out.println("=======================SEGUNDO FILME=======================");
-        Filme filme2 = new Filme("Piratas do caribe");
-
-        filme2.setAnoDeLancamento(2002);
+        Filme filme2 = new Filme("Piratas do caribe", 2002);
         filme2.setDuracaoEmMinutos(200);
 
         filme2.avalia(19);
@@ -39,10 +33,7 @@ public class Principal {
         filme1.exibeFichaTecnica();
 
         System.out.println("=======================SERIES=======================");
-        Serie serie = new Serie();
-
-        serie.setNome("Lost");
-        serie.setAnoDeLancamento(100);
+        Serie serie = new Serie("Lost", 2002);
         serie.setTemporadas(10);
         serie.setEpisodiosPorTemporada(10);
         serie.setMinutorPorEpisodio(20);
@@ -74,10 +65,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filme3 = new Filme("Dogville");
+        var filme3 = new Filme("Dogville", 2003);
         filme3.setDuracaoEmMinutos(200);
-//        filme3.setNome("Dogville");
-        filme3.setAnoDeLancamento(2003);
         filme3.avalia(10);
 
         // Criando lista de filmes
