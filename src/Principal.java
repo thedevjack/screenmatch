@@ -11,9 +11,8 @@ public class Principal {
     public static void main(String[] args) {
 
         System.out.println("=======================PRIMEIRO FILME=======================");
-        Filme filme1 = new Filme();
+        Filme filme1 = new Filme("Star Wars");
 
-        filme1.setNome("Star Wars");
         filme1.setAnoDeLancamento(1985);
         filme1.setDuracaoEmMinutos(180);
         filme1.avalia(10);
@@ -25,12 +24,10 @@ public class Principal {
         filme1.exibeFichaTecnica();
 
         System.out.println("=======================SEGUNDO FILME=======================");
-        Filme filme2 = new Filme();
+        Filme filme2 = new Filme("Piratas do caribe");
 
-        filme2.setNome("Piratas do caribe");
         filme2.setAnoDeLancamento(2002);
         filme2.setDuracaoEmMinutos(200);
-
 
         filme2.avalia(19);
         filme2.avalia(9);
@@ -77,9 +74,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filme3 = new Filme();
+        var filme3 = new Filme("Dogville");
         filme3.setDuracaoEmMinutos(200);
-        filme3.setNome("Dogville");
+//        filme3.setNome("Dogville");
         filme3.setAnoDeLancamento(2003);
         filme3.avalia(10);
 
@@ -95,6 +92,7 @@ public class Principal {
         // .get() pega o primeiro valor da lista, no caso a posicao ZERO
         System.out.println("Primeiro filme: " + listaFilmes.get(0));
         System.out.println(listaFilmes);
+
 
     }
 }
