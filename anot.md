@@ -27,3 +27,5 @@
 #  Pilares da Orientação a Objetos, que são [abstração], [herança], [encapsulamento] e [polimorfismo].
 
 # Manipular um ArrayList com seus métodos add(), size() e get();
+
+# Construtor = método que tem como função a criação de um objeto em memória.
