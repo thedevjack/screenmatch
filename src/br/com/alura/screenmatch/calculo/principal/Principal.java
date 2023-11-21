@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.calculo.principal;
+
 import br.com.alura.screenmatch.calculo.Calculadora;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.model.Episodio;
