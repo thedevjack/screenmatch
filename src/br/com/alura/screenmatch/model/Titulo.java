@@ -1,6 +1,7 @@
 package br.com.alura.screenmatch.model;
 
-public class Titulo {
+// usando a Interface comparable e ele compara titulo com titulo
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -78,4 +79,10 @@ public class Titulo {
         this.totalDeAvaliacoes = totalDeAvaliacoes;
     }
 
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        //passando o nome do titulo e passando o nome do do parametro que vai receber
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
