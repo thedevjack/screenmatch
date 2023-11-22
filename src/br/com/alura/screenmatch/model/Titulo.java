@@ -1,6 +1,11 @@
 package br.com.alura.screenmatch.model;
 
+<<<<<<< HEAD
 public class Titulo {
+=======
+// usando a Interface comparable e ele compara titulo com titulo
+public class Titulo implements Comparable<Titulo> {
+>>>>>>> java-poo-collection
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -8,6 +13,14 @@ public class Titulo {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
 
+<<<<<<< HEAD
+=======
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+>>>>>>> java-poo-collection
     public void exibeFichaTecnica() {
         System.out.println("FICHA TECNICA");
         System.out.println("Nome: " + nome);
@@ -73,4 +86,13 @@ public class Titulo {
         this.totalDeAvaliacoes = totalDeAvaliacoes;
     }
 
+<<<<<<< HEAD
+=======
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        //passando o nome do titulo e passando o nome do do parametro que vai receber
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
+>>>>>>> java-poo-collection
 }
