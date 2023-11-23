@@ -7,6 +7,10 @@ public class Serie extends Titulo {
     private boolean ativa;
     private int minutorPorEpisodio;
 
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -39,4 +43,19 @@ public class Serie extends Titulo {
         this.minutorPorEpisodio = minutorPorEpisodio;
     }
 
+    // A anotacao @Override possibilita a sobrescrita de um metodo
+    @Override
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutorPorEpisodio;
+    }
+
+    @Override
+    public double getSomaDasAvaliacoes() {
+        return super.getSomaDasAvaliacoes();
+    }
+
+    @Override
+    public String toString() {
+        return "Série: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
+    }
 }
