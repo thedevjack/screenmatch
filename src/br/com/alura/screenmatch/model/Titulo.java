@@ -82,7 +82,7 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public int compareTo(Titulo outroTitulo) {
-        //passando o nome do titulo e passando o nome do do parametro que vai receber
+        //passando o nome do titulo e passando o nome do parametro que vai receber
         return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

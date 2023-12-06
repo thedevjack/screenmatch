@@ -29,3 +29,5 @@
 # Manipular um ArrayList com seus métodos add(), size() e get();
 
 # Construtor = método que tem como função a criação de um objeto em memória.
+
+# O Comparable permite que você diga uma regra de comparação para a classe que implementar essa interface, como uma espécie de regra padrão ou regra oficial, enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe Comparator fazendo cada uma a sua própria regra.
