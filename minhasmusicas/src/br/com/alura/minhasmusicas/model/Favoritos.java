@@ -1,4 +1,4 @@
-package br.com.alura.minhasmusicas.model;
+package src.br.com.alura.minhasmusicas.model;
 
 public class Favoritos {
 

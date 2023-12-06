@@ -1,3 +1,5 @@
+package src;
+
 public class Compras implements Comparable<Compras> {
     private String descricao;
     private double valor;

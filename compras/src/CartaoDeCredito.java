@@ -1,3 +1,7 @@
+package src;
+
+import src.Compras;
+
 import java.util.ArrayList;
 import java.util.List;
 

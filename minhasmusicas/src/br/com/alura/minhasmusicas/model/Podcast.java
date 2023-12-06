@@ -1,4 +1,4 @@
-package br.com.alura.minhasmusicas.model;
+package src.br.com.alura.minhasmusicas.model;
 
 // SUB CLASSE que HERDA de -> Audio
 public class Podcast extends Audio {

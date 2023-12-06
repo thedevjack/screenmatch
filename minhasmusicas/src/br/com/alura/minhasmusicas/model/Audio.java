@@ -1,4 +1,4 @@
-package br.com.alura.minhasmusicas.model;
+package src.br.com.alura.minhasmusicas.model;
 
 // SUPER CLASSE
 public class Audio {
