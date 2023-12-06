@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/compras/compras.iml" filepath="$PROJECT_DIR$/compras/compras.iml" />
+=======
+>>>>>>> 7058a81fbc66871b1afac1470200fe35f5a9b6f6
+      <module fileurl="file://$PROJECT_DIR$/minhasmusicas/minhasmusicas.iml" filepath="$PROJECT_DIR$/minhasmusicas/minhasmusicas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenmatch.iml" filepath="$PROJECT_DIR$/screenmatch.iml" />
+    </modules>
+  </component>
+</project>
