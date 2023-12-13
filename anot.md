@@ -31,3 +31,5 @@
 # Construtor = método que tem como função a criação de um objeto em memória.
 
 # O Comparable permite que você diga uma regra de comparação para a classe que implementar essa interface, como uma espécie de regra padrão ou regra oficial, enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe Comparator fazendo cada uma a sua própria regra.
+
+# @ControllerAdvive = Usado sempre quando precisa concentrar algum tratamento que seria espalhado em todos os controllers, isso evita copiar codigo em outras classes. Com isso toda vez quando o controller lançar uma excessão, caso ninguém forneça uma exceção mais especifico, ai vai cair no tratamento global do ControllerAdvice

@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.calculo.principal;
+package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.calculo.Calculadora;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
