@@ -33,3 +33,5 @@
 # O Comparable permite que você diga uma regra de comparação para a classe que implementar essa interface, como uma espécie de regra padrão ou regra oficial, enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe Comparator fazendo cada uma a sua própria regra.
 
 # @ControllerAdvive = Usado sempre quando precisa concentrar algum tratamento que seria espalhado em todos os controllers, isso evita copiar codigo em outras classes. Com isso toda vez quando o controller lançar uma excessão, caso ninguém forneça uma exceção mais especifico, ai vai cair no tratamento global do ControllerAdvice
+
+# NullPointerException, que indica o acesso a algum atributo ou método de um objeto que é nulo, ou seja, que não foi instanciado ou foi atributo ao valor null.

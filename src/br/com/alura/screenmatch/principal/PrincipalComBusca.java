@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.model.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -20,30 +21,37 @@ public class PrincipalComBusca {
         var busca = scanner.nextLine();
 
         String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=2a58e946";
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(endereco))
+                    .build();
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endereco))
-                .build();
-
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
 
 
-        String json = response.body();
-        System.out.println(json);
+            String json = response.body();
+            System.out.println(json);
 
-        // definir o retorno do json com letra minusculas
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+            // definir o retorno do json com letra minusculas
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
 
-        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class );
-        System.out.println(meuTituloOmdb);
+            TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            System.out.println(meuTituloOmdb);
 
-        // Titulo convertido para receber valores do Omdb e passando como parametro para o construtor
-        Titulo meuTitulo = new Titulo(meuTituloOmdb);
-        System.out.println("--------------------------------------------------------");
-        System.out.println(meuTitulo);
+            // Titulo convertido para receber valores do Omdb e passando como parametro para o construtor
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Titulo ja convertido");
+            System.out.println(meuTitulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Aconteceu um erro: " + e.getMessage());
+        } catch (IllegalArgumentException e){
+            System.out.println("Erro de argumento invalido na busca: " + e.getMessage());
+        }
+
+        System.out.println("O programa iniciou corretamente!");
 
 
     }
