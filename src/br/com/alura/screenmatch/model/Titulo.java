@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.model;
 
+import br.com.alura.screenmatch.excecao.ErroConversaoException;
 import com.google.gson.annotations.SerializedName;
 
 // usando a Interface comparable e ele compara titulo com titulo
@@ -21,6 +22,9 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+        if (meuTituloOmdb.year().length() > 4){
+            throw new ErroConversaoException("Não foi possivel converter o ano mais que 4 caracteres");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
     }
